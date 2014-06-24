@@ -4,6 +4,15 @@
 ##
 ## Copyright (C) 2012 Aldebaran Robotics
 ##
+cmake_minimum_required(VERSION 2.6.4)
+project(libqimessaging)
+find_package(qibuild)
+
+enable_testing()
+
+qi_sanitize_compile_flags(HIDDEN_SYMBOLS)
+
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}")
 
 qi_create_lib("qic" SHARED qic/api.h
                      qic/application.h
