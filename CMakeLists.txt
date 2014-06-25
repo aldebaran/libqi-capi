@@ -32,7 +32,7 @@ qi_create_lib("qic" SHARED qic/api.h
                      src/value.cpp
                      src/type.cpp)
 
-qi_use_lib(qic qimessaging qitype qi)
+qi_use_lib(qic qi)
 qi_stage_lib(qic)
 
 add_subdirectory("test")

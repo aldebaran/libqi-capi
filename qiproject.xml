@@ -1,6 +1,6 @@
 <project version="3">
   <qibuild name="libqi-capi" >
-    <depends buildtime="true" runtime="true" names="boost libqi libqitype libqimessaging"/>
+    <depends buildtime="true" runtime="true" names="boost libqi"/>
     <depends buildtime="true" names="gtest pthread"/>
   </qibuild>
   <qidoc dest="." name="libqi-c" type="doxygen" />
