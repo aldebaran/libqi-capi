@@ -5,7 +5,7 @@
 ## Copyright (C) 2012 Aldebaran Robotics
 ##
 cmake_minimum_required(VERSION 2.6.4)
-project(libqimessaging)
+project(libqi-capi)
 find_package(qibuild)
 
 enable_testing()
@@ -32,5 +32,8 @@ qi_create_lib("qic" SHARED qic/api.h
                      src/value.cpp
                      src/type.cpp)
 
-qi_use_lib(qic qimessaging qitype qi)
+qi_use_lib(qic qi)
 qi_stage_lib(qic)
+
+add_subdirectory("test")
+add_subdirectory("bin")
