@@ -203,9 +203,9 @@ TEST(DISABLED_testValues, testlist)
 
   printf("%d", qi_value_list_size(mylist));
 
-  ASSERT_EQ(size, 4);
+  ASSERT_EQ(size, 4U);
 
-  int i;
+  unsigned i;
   for(i = 0; i < size; i++)
   {
     const char *val = qi_value_get_string(qi_value_list_get(mylist, i));
