@@ -86,15 +86,6 @@ TEST(TestFuture, Error)
   qi_promise_destroy(promise);
 }
 
-TEST(TestFuture, NotCancelable)
-{
-  qi_promise_t* promise = qi_promise_create(true);
-  qi_future_t*  future = qi_promise_get_future(promise);
-  ASSERT_FALSE(qi_future_is_cancelable(future));
-  qi_future_destroy(future);
-  qi_promise_destroy(promise);
-}
-
 void onError(qi_promise_t *prom, void *) {
   qi_promise_set_error(prom, "plouf");
 }

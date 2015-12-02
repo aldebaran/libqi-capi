@@ -40,7 +40,7 @@ extern "C"
   QIC_API int           qi_future_is_running(qi_future_t *fut);
   QIC_API int           qi_future_is_finished(qi_future_t *fut);
   QIC_API int           qi_future_is_canceled(qi_future_t *fut);
-  QIC_API int           qi_future_is_cancelable(qi_future_t *fut);
+  QIC_API QI_API_DEPRECATED int qi_future_is_cancelable(qi_future_t *fut);
 
   QIC_API void          qi_future_cancel(qi_future_t *fut);
 
