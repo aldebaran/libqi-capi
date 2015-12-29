@@ -343,7 +343,7 @@ qi_value_t*  qi_value_map_get(qi_value_t *msg, qi_value_t *key)
     return 0;
   }
   try {
-    r = container._element(k.asReference(), true);
+    r = container[k.asReference()];
     qi_value_t* ret = qi_value_create("");
     qi::AnyValue &gv = qi_value_cpp(ret);
     gv = r;
@@ -363,7 +363,7 @@ qi_value_t* qi_value_map_keys(qi_value_t *msg)
   qi::AnyValue* ar = new qi::AnyValue(listType);
   //construct a list<k>
   for (it = m.begin(); it != m.end(); ++it) {
-    ar->_append(it->first);
+    ar->append(it->first);
   }
   return (qi_value_t*)(ar);
 }
