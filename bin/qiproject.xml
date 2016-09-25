@@ -1,0 +1,5 @@
+<project version="3">
+  <qibuild name="libqi-capi-bin" >
+    <depends buildtime="true" runtime="true" names="boost libqi libqi-capi"/>
+  </qibuild>
+</project>

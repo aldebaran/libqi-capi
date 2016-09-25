@@ -36,4 +36,3 @@ qi_use_lib(qic qi)
 qi_stage_lib(qic)
 
 add_subdirectory("test")
-add_subdirectory("bin")
